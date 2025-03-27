@@ -9,7 +9,7 @@ namespace API;
 
 public class UsersController(DataContext context): ControllerBase{
 
-  [HttpGet()]
+  [HttpGet]
   public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers(){
     var users = await context.Users.ToListAsync();
     return Ok(users);
